@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+import ChatContainer from './redux_project/ChatContainer'
 import './App.css';
+import {connect} from 'react-redux';
 
-function App() {
+
+function App({ active }) {
+
+  let bgClass
+  if(active === '3mzfe'){
+    bgClass = 'morning'
+  }
+  else if(active === '2feax'){
+    bgClass = 'afternoon'
+  }
+  else{
+    bgClass = 'evening'
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = {`parentWrapper ${bgClass}`}>
+      <div className = {`parent`}>
+      <ChatContainer />
+     </div>
     </div>
+    
+      
   );
 }
 
-export default App;
+const mapStateToProps = (state)=>({
+  active:state.activeThread
+})
+
+export default connect(mapStateToProps)(App);

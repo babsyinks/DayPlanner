@@ -1,0 +1,109 @@
+.messagesWrapper{
+    border:1px solid black;
+    width:100%;
+    transition: all 0.5s ease-in;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+.morningBg{
+    background-color:rgb(255, 255, 221);
+}
+
+.afternoonBg{
+    background-color: rgb(255, 255, 148);
+}
+
+.eveningBg{
+    background-color: black;
+    color: white;
+}
+
+.plans{
+    font-weight:bold;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+
+.commentsWrapper{
+    padding:10px;
+}
+
+.comments{
+    text-align:left;
+    cursor:default;
+    padding-left: 5px;
+    padding-bottom: 25px;
+    overflow-wrap: break-word;
+    
+}
+
+.morningBb{
+    border-bottom:1px solid rgb(43, 209, 43);
+    
+}
+
+.afternoonBb{
+    border-bottom:1px solid rgb(42, 42, 189);
+}
+
+.eveningBb{
+    border-bottom:1px solid rgb(194, 23, 52);
+}
+
+.inputs{
+    padding-left: 10px;
+}
+
+.inputs textarea{
+    width:85%;
+    height:100px;
+    margin-top: 10px;
+}
+
+.inputs input[type = 'button']{
+    width:200px;
+    height:40px;
+    margin:5px 0px;
+    font-weight:bold;
+    text-align:center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(146, 109, 216);
+    
+}
+
+.inputs input[type = 'button']:hover{
+    background-color:rgb(69, 0, 116) ;
+    color: white;
+}
+
+.inputs input[type = 'button']:disabled{
+    background-color:transparent ;
+    color:grey;
+    
+}
+
+.inputs input[type = 'button']:hover:disabled{
+    background-color:transparent ;
+    color:grey;
+}
+
+.inputs input[type = 'button']:hover:not(:disabled){
+    animation: animate 0.5s linear;
+} 
+
+
+@keyframes animate{
+   0%{
+       transform: scale(1);
+   }
+
+   50%{
+       transform: scale(1.1);
+   }
+
+   100%{
+       transform: scale(1);
+   }
+}
