@@ -11,11 +11,14 @@
 
 .tabs{
     padding:0px 0px;
-    display:inline-block;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     cursor:pointer;
-    text-align: center;
     font-weight: bold;
     transition: all 0.5s ease-in;
+    height: 100%;
 }
 
 .tabsWrapper{
@@ -24,6 +27,17 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     
+}
+
+.tabsWrapper a{
+    text-decoration: none;
+}
+
+@media only screen and (min-height:1000px){
+   
+    .tabsWrapper{
+        height: 4%;  
+    }
 }
 
 .morningColor{

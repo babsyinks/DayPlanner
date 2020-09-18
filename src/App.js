@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatContainer from './redux_project/ChatContainer'
+import PlansContainer from './client/PlansContainer'
 import './App.css';
 import {connect} from 'react-redux';
 
@@ -21,7 +21,7 @@ function App({ active }) {
   return (
     <div className = {`parentWrapper ${bgClass}`}>
       <div className = {`parent`}>
-      <ChatContainer />
+      <PlansContainer />
      </div>
     </div>
     

@@ -16,7 +16,8 @@ export const Tabs = ({active,thread,selectTab})=>{
     
     return (
         <div className = 'tabsWrapper'>
-            {thread.map((th,i)=><div key = {i} className = {`tabs ${(th.id === active)?`active ${activeTab}`:'inActive'}`} onClick = {()=>{selectTab(th.id)}}>{th.title}</div>)}
+            {thread.map((th,i)=>(
+            <a href = {`#${th.title}`} key = {i}><div  className = {`tabs ${(th.id === active)?`active ${activeTab}`:'inActive'}`} onClick = {()=>{selectTab(th.id)}}>{th.title}</div></a>))}
         </div>
     )
 

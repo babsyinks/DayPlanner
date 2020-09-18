@@ -5,6 +5,12 @@ export const deleteAction = id=>({
         id
     })
 
+export const editAction = (id,payload)=>({
+    type:'EDIT_MESSAGE',
+    id,
+    payload
+})
+
 export const submitAction = message=>(dispatch,getState)=>{
     dispatch({type:'ADD_MESSAGE',
     id:getState().activeThread,

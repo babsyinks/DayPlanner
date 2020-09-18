@@ -3,9 +3,7 @@ import Thread from './Thread'
 import ThreadTabs from './ThreadTabs'
 
 
-export default class ChatContainer extends React.Component{
-
-   
+export default class PlansContainer extends React.Component{
 
     render(){
 

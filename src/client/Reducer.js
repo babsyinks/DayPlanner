@@ -1,4 +1,4 @@
-import {createStore,combineReducers,applyMiddleware} from 'redux';
+import {createStore,combineReducers,applyMiddleware,compose} from 'redux';
 import thunk from 'redux-thunk';
 
  function activeThreadIdReducer(id_state = '3mzfe',action){
@@ -30,6 +30,9 @@ function threadReducer(thread_state = initial_state,action){
                 threads:[...arrayOfThreadsBeforeInsert,activeThread,...arrayOfThreadsAfterInsert],
                 messages:messageReducer(thread_state.messages,action)
             }
+        
+        case 'EDIT_MESSAGE':
+            return {threads:thread_state.threads,messages:messageReducer(thread_state.messages,action)}
 
         case 'DELETE_MESSAGE':
             return {threads:thread_state.threads,messages:messageReducer(thread_state.messages,action)}    
@@ -45,7 +48,7 @@ const initial_state = {
     messages:[[],[],[]]
 }
 
-function messageReducer(message_state = [[],[],[]],action){
+function messageReducer(message_state,action){
 
     switch(action.type){
         case 'ADD_MESSAGE':
@@ -64,14 +67,26 @@ function messageReducer(message_state = [[],[],[]],action){
                 default:
                     return new_state
             }
-         
-    
+        case 'EDIT_MESSAGE':
+            console.log(action.id)
+            return message_state.map((arr)=>{
+                
+                return arr.map(obj=>{
+                    if(obj.id === action.id){
+                        console.log(obj.id)
+                        console.log(action.id)
+                        return {...obj,message:action.payload}
+                    }
+                    else{
+                        return obj
+                    }
+                })
+            })
 
         case 'DELETE_MESSAGE':
-         const n_state = message_state.filter(msg=>msg.id !== action.id)
-         return n_state
-
-         default:
+         return message_state.map((arr=>arr.filter(msg=>msg.id !== action.id)))
+        
+        default:
              return message_state
 
     }
@@ -84,5 +99,5 @@ const reducer = combineReducers({
     activeThread:activeThreadIdReducer,
     thread:threadReducer
 })
-
-export const store = createStore(reducer,applyMiddleware(thunk))
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+export const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))

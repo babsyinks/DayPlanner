@@ -3,8 +3,10 @@
     width:100%;
     transition: all 0.5s ease-in;
     overflow-y: scroll;
-    max-height: 500px;
+    max-height: 60%;
 }
+
+
 
 .morningBg{
     background-color:rgb(255, 255, 221);
@@ -20,6 +22,7 @@
 }
 
 .plans{
+    font-size: 22px;
     font-weight:bold;
     padding-left: 10px;
     margin-top: 10px;
@@ -28,15 +31,29 @@
 
 .commentsWrapper{
     padding:10px;
+    
 }
 
 .comments{
+    display: flex;
     text-align:left;
     cursor:default;
     padding-left: 5px;
     padding-bottom: 25px;
-    overflow-wrap: break-word;
-    
+    overflow-wrap: break-word;  
+    justify-content: space-between; 
+}
+
+.comments .msg{
+    width:93%;
+}
+
+.comments .btns{
+  width: 5%;
+}
+
+.comments .btns span{
+    padding:0px 3px;
 }
 
 .morningBb{
@@ -58,14 +75,15 @@
 
 .inputs textarea{
     width:85%;
-    height:100px;
+    height:150px;
     margin-top: 10px;
 }
 
 .inputs input[type = 'button']{
+    display: block;
     width:200px;
     height:40px;
-    margin:5px 0px;
+    margin:10px 0px 15px;
     font-weight:bold;
     text-align:center;
     color: rgb(0, 0, 0);
@@ -106,4 +124,56 @@
    100%{
        transform: scale(1);
    }
+}
+
+
+@media only screen and (max-height:800px){
+    .inputs textarea{
+        height:100px;
+    }
+}  
+
+
+
+@media only screen and (max-height:700px){
+    .inputs textarea{
+        height:80px;
+    }
+}    
+
+
+@media only screen and (max-height:550px){
+    .messagesWrapper{
+        max-height: 250px;
+    }
+
+    .plans{
+        font-size: 16px;
+        font-weight:bold;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-height:600px){
+    .plans{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-height:1000px){
+   
+    .inputs textarea{
+        height:250px;
+    }
+}
+
+@media only screen and (min-height:1200px){
+    .messagesWrapper{
+        max-height: 800px;
+    }
+
+    .inputs textarea{
+        height:350px;
+    }
 }

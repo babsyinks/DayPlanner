@@ -1,6 +1,6 @@
 import Messages from './Messages';
 import {connect} from 'react-redux';
-import {deleteAction,submitAction} from './actions'
+import {deleteAction,submitAction, editAction} from './actions'
 
 const mapStatetoProps = (state)=>{
 
@@ -8,4 +8,4 @@ const mapStatetoProps = (state)=>{
 
 }
 
-export default connect(mapStatetoProps,{delete:deleteAction,submit:submitAction})(Messages)
+export default connect(mapStatetoProps,{delete:deleteAction,submit:submitAction,edit:editAction})(Messages)
