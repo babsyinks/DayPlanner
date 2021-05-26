@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import {BrowserRouter,Route,Switch,Redirect} from 'react-router-dom';
 import SignIn from './SignIn';
 import App from './App';
 import ListOfSavedPlans from './ListOfSavedPlans'
@@ -12,6 +12,7 @@ const Container = ()=>{
                 <Route exact path = '/dayplanner' render = {(props)=><App {...props} />}/>
                 <Route exact path = '/dayplanner/:dateSaved' render = {(props)=><App {...props} />}/>
                 <Route exact path = '/savedplans' render = {(props)=><ListOfSavedPlans {...props} />}/>
+                <Route render = {()=><Redirect to = '/' />}/>
             </Switch>
         </BrowserRouter>
     )
