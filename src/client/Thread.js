@@ -1,6 +1,6 @@
 import Messages from './Messages';
 import {connect} from 'react-redux';
-import {deleteAction,submitAction, editAction} from './actions'
+import {deleteAction,submitAction, editAction} from './actions/actions'
 
 const mapStatetoProps = (state)=>{
 

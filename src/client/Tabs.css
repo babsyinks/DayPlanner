@@ -1,6 +1,7 @@
+
 .active{
     border:2px solid red;
-  
+    box-sizing: border-box;
 }
 
 .inActive{
@@ -10,7 +11,6 @@
 }
 
 .tabs{
-    padding:0px 0px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -19,13 +19,14 @@
     font-weight: bold;
     transition: all 0.5s ease-in;
     height: 100%;
+    font-size: 1.1713vw;
 }
 
 .tabsWrapper{
     width:100%;
-    border:1px solid black;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    height:4.03vw;
     
 }
 
@@ -33,12 +34,6 @@
     text-decoration: none;
 }
 
-@media only screen and (min-height:1000px){
-   
-    .tabsWrapper{
-        height: 4%;  
-    }
-}
 
 .morningColor{
     background-color:rgb(255, 255, 221);
@@ -53,5 +48,15 @@
 .eveningColor{
     background-color:black;
     color: white;
+}
+
+@media only screen and (orientation:portrait){
+    .tabs{
+        font-size: 1.1713vh;
+    }
+
+    .tabsWrapper{
+        height:4.03vh;
+    }
 }
 

@@ -1,0 +1,153 @@
+.parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:70%;
+  height: 85%;
+}
+
+
+@media only screen and (max-width:400px){
+  .parent{
+      width: 80%;
+  }
+  
+}
+
+.parentWrapper{
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
+  height: 95vh;
+  transition: all 0.5s ease-in;
+  box-sizing: content-box;
+}
+
+#signout{
+  position:absolute;
+  right:20px;
+  top:20px;
+  background-color: rgb(48, 197, 48);
+  border: 1px solid rgb(124, 124, 124);
+  padding:5px;
+  font-size: 1.3vw;
+  cursor:pointer;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+#signout:hover{
+  color:rgb(48, 197, 48);
+  background-color: black;
+}
+#acctPix{
+  display: inline-block;
+  position:absolute;
+  left:20px;
+  top:20px;
+  border-radius: 50px;
+  width:14.61vh;
+  height: 14.61vh;
+}
+
+#welcomeMsg{
+  padding:5px;
+  background-color:rgba(0,0,0,0.7);
+  color:white;
+  font-family: acumin-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.4vw;
+  margin-bottom: 10px;
+}
+
+.routePlans{
+  display: inline-block;
+  padding:5px;
+  font-family:adobe-garamond-pro, serif;
+  margin-top: 20px;
+  font-size: 1.4vw;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+#prevPlans{
+  background-color:rgba(87, 55, 230, 0.7);
+  color:white;
+  margin-right: 20px;
+}
+
+#prevPlans:hover{
+  background-color:rgba(47, 0, 255, 0.7);
+}
+
+#todayPlans{
+  background-color:rgb(55, 230, 84);
+  color:white;
+}
+
+#todayPlans:hover{
+  background-color:rgb(17, 255, 57);
+}
+
+@media only screen and (max-height:300px){
+  .parentWrapper{
+    height:auto;
+    padding-bottom: 20px;
+  }
+}
+
+
+@media only screen and (min-height:1200px){
+ .parentWrapper{
+   height: 96.5vh;
+ }
+}
+
+.morning{
+  background:url('/images/morning.jpg');
+  background-size: cover;
+  
+ 
+}
+
+.afternoon{
+  background:url('/images/afternoon.jpg');
+  background-size: cover;
+  
+}
+
+.evening{
+  background: url('/images/evening.jpg');
+  background-size: cover;
+}
+
+@media screen and (orientation:portrait){
+  #signout{
+    font-size: 1.3vh;
+  }
+
+  #welcomeMsg,#prevPlans{
+    font-size: 1.4vh;
+  }
+
+  #acctPix{
+    width:14.61vw;
+    height: 14.61vw;
+  }
+
+  .parent{
+    height: 70%;
+  }
+
+  .routePlans{
+    font-size: 1.4vh;
+  }
+}

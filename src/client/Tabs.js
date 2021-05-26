@@ -1,6 +1,20 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './Tabs.css'
 export const Tabs = ({active,thread,selectTab})=>{
+
+  useEffect(()=>{
+    const current_hour = new Date().getHours()
+    if(current_hour<=11){
+      selectTab('3mzfe')
+    }
+    else if(current_hour>11 && current_hour <=17){
+      selectTab('2feax')
+    }
+    else{
+      selectTab('1hxef')
+    }
+  // eslint-disable-next-line
+  },[])
 
     let activeTab
 
