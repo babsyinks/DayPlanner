@@ -1,0 +1,211 @@
+.messagesWrapper{
+    border:1px solid black;
+    width:100%;
+    transition: all 0.5s ease-in;
+    overflow-y: scroll;
+    max-height: 60%;
+}
+
+i{
+    cursor: pointer;
+}
+
+.morningBg{
+    background-color:rgb(255, 255, 221);
+}
+
+.afternoonBg{
+    background-color: rgb(255, 255, 148);
+}
+
+.eveningBg{
+    background-color: black;
+    color: white;
+}
+
+.plans{
+    font-size: 1.61vw;
+    font-weight:bold;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+
+.commentsWrapper{
+    padding:10px;
+    
+}
+
+.comments{
+    display: flex;
+    text-align:left;
+    cursor:default;
+    padding-left: 5px;
+    padding-bottom: 25px;
+    overflow-wrap: break-word;  
+    justify-content: space-between; 
+}
+
+.msg{
+    font-size:  1.171vw;
+}
+
+.comments .msg{
+    width:93%;
+}
+
+.comments .btns{
+  width: 5%;
+}
+
+.comments .btns span{
+    padding:0px 3px;
+}
+
+.morningBb{
+    border-bottom:1px solid rgb(43, 209, 43);
+    
+}
+
+.afternoonBb{
+    border-bottom:1px solid rgb(42, 42, 189);
+}
+
+.eveningBb{
+    border-bottom:1px solid rgb(194, 23, 52);
+}
+
+.inputs{
+    padding-left: 10px;
+}
+
+.inputs textarea{
+    width:85%;
+    height:150px;
+    margin-top: 10px;
+}
+
+.inputs input[type = 'button'], .inputs button{
+    display: block;
+    width:14.64vw;
+    height:2.93vw;
+    margin:10px 0px 15px;
+    font-weight:bold;
+    text-align:center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(146, 109, 216);
+    font-size:  1.1713vw;
+}
+
+.inputs input[type = 'button']:hover, .inputs button:hover{
+    background-color:rgb(69, 0, 116) ;
+    color: white;
+}
+
+.inputs input[type = 'button']:disabled, .inputs button:disabled{
+    background-color:transparent ;
+    color:grey;
+    border: 1px solid grey;
+    
+}
+
+.inputs input[type = 'button']:hover:disabled, .inputs button:hover:disabled{
+    background-color:transparent ;
+    color:grey;
+}
+
+.inputs input[type = 'button']:hover:not(:disabled), .inputs button:hover:not(:disabled){
+    animation: animate 0.5s linear;
+} 
+
+.inputs textarea{
+    border:1px solid grey;
+}
+.inputs textarea:focus{
+    border:1px solid grey;
+    background-color: rgb(231, 218, 218);
+}
+@keyframes animate{
+   0%{
+       transform: scale(1);
+   }
+
+   50%{
+       transform: scale(1.1);
+   }
+
+   100%{
+       transform: scale(1);
+   }
+}
+
+
+@media only screen and (max-height:800px){
+    .inputs textarea{
+        height:100px;
+    }
+}  
+
+
+
+@media only screen and (max-height:700px){
+    .inputs textarea{
+        height:80px;
+    }
+}    
+
+
+@media only screen and (max-height:550px){
+    .messagesWrapper{
+        max-height: 250px;
+    }
+
+    .plans{
+        /* font-size: 16px; */
+        font-weight:bold;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+}
+
+/* @media only screen and (max-height:600px){
+    .plans{
+        font-size: 16px;
+    }
+} */
+
+@media only screen and (min-height:1000px){
+   
+    .inputs textarea{
+        height:250px;
+    }
+}
+
+@media only screen and (min-height:1200px){
+    .messagesWrapper{
+        max-height: 800px;
+    }
+
+    .inputs textarea{
+        height:350px;
+    }
+}
+
+
+@media only screen and (orientation:portrait){
+    .plans{
+        font-size: 1.61vh;
+    }
+
+    .inputs input[type = 'button']{
+        width:14.64vh;
+        height:2.93vh;
+        font-size:  1.1713vh;
+    }
+    .msg{
+        font-size:  1.171vh;
+    }
+    .btns{
+        margin-right: 5px;
+      }
+}

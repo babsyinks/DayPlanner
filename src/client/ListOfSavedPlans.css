@@ -1,0 +1,34 @@
+#wrapper-container{
+    width: 100%;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#plans-wrapper{
+    width:70%;
+    min-height: 90vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#saved-plans{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: 'Crimson Text', serif;
+}
+
+.bigHeading{
+    font-size: 2.34vw;
+}
+
+@media only screen and (orientation:portrait) {
+    .bigHeading{
+        font-size:2.54vh
+    }
+}

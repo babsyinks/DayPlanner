@@ -1,0 +1,23 @@
+#plans-ind{
+    font-size: 1.245vw;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgb(0, 195, 255);
+    cursor: pointer;
+    width:fit-content;
+    margin-bottom: 10px;
+    font-family: 'KoHo', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (orientation:portrait){
+    #plans-ind{
+        font-size: 1.245vh;
+    }
+}
+
+#plans-ind:hover{
+    font-size: 1.245vw;
+    border: 2px solid rgb(0, 110, 255);
+    font-weight: bold;
+}

@@ -1,0 +1,99 @@
+.signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid rgb(216, 216, 216);
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.signin:hover{
+    color:rgb(0, 89, 255);
+    background-color:white;
+}
+.signin img{
+    display:inline-block;
+    height:100%;
+    width:15%;
+    border-radius: 5px;
+}
+
+.signin span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:85%;
+    height:100%;
+}
+/* .header-text{
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 700;
+    font-style: italic;
+    
+  } */
+
+  .container-header{
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 700;
+    font-style: italic;
+    width: 960px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .container-header h2{
+      font-size:2.34vw;
+  }
+
+  .successMsg{
+    color: green;
+    font-weight: 600;
+  }
+
+  .errorMsg{
+      color: red;
+      font-weight: 600;
+  }
+  @media only screen and (orientation:portrait){
+      .container-header h2{
+         font-size: 2.34vh; 
+      } 
+  }
+
+  @media only screen and (max-width:900px) and (orientation:landscape){
+    .container-header h2{
+       font-size: 3vw; 
+    } 
+}
+
+@media only screen and (max-height:900px) and (orientation:portrait){
+    .container-header h2{
+       font-size: 3vh; 
+    } 
+}
+
+@media only screen and (max-width:600px) and (orientation:landscape){
+    .container-header h2{
+       font-size: 3.5vw; 
+    } 
+}
+
+@media only screen and (max-height:600px) and (orientation:portrait){
+    .container-header h2{
+       font-size: 3.5vh; 
+    } 
+}

@@ -1,0 +1,62 @@
+
+.active{
+    border:2px solid red;
+    box-sizing: border-box;
+}
+
+.inActive{
+    border:1px solid white;
+    background-color: rgb(53, 1, 95);
+    color: white;
+}
+
+.tabs{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor:pointer;
+    font-weight: bold;
+    transition: all 0.5s ease-in;
+    height: 100%;
+    font-size: 1.1713vw;
+}
+
+.tabsWrapper{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height:4.03vw;
+    
+}
+
+.tabsWrapper a{
+    text-decoration: none;
+}
+
+
+.morningColor{
+    background-color:rgb(255, 255, 221);
+    color: black;
+}
+
+.afternoonColor{
+    background-color:rgb(255, 255, 148);
+    color: black;
+}
+
+.eveningColor{
+    background-color:black;
+    color: white;
+}
+
+@media only screen and (orientation:portrait){
+    .tabs{
+        font-size: 1.1713vh;
+    }
+
+    .tabsWrapper{
+        height:4.03vh;
+    }
+}
+
