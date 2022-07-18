@@ -25,13 +25,7 @@ function ListofPlans({user,history}) {
             setPlansList(snapShot.docs)
             console.log(snapShot.docs)
         }
-        setFetched(true)
-    /*       if(Object.keys(data).length === 0){
-            setFetched(true)
-        }
-        else{
-
-        } */           
+        setFetched(true)          
         }
 
         fetchData()
