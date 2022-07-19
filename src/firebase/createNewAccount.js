@@ -10,9 +10,7 @@ const createNewAccount = async (email,password)=>{
         return `Password must have atleast one each of all of the following:  numbers, special characters(e.g *,-), uppercase and lowercase letters,`
     }
     try {
-       
        await auth.createUserWithEmailAndPassword(email, password)
-        
     } catch (error) {
         console.log(error)
         return error.message

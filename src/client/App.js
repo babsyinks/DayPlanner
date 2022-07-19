@@ -49,7 +49,7 @@ function App({ active,userAuth,setUser,history,match,loginClicked,setMessage }) 
     try{
       await auth.signOut()
       setMessage([[],[],[]])
-
+      setUser(null)
     }
     catch(err){
       console.log(err)
