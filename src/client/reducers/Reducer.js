@@ -69,7 +69,6 @@ function messageReducer(message_state,action){
             }
         case 'EDIT_MESSAGE':
             return message_state.map((arr)=>{
-                
                 return arr.map(obj=>{
                     if(obj.msg_id === action.msg_id){
                         return {...obj,message:action.payload}
@@ -112,15 +111,6 @@ function loginReducer(state = 'init', action){
             return state
     }
 }
-
-/* function allPlansReducer(state = null,action){
-    switch(action.type){
-        case 'SET_SAVED_PLANS':
-            return action.type
-        default:
-            return state
-    }
-} */
 
 const reducer = combineReducers({
     activeThread:activeThreadIdReducer,

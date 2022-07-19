@@ -57,7 +57,6 @@ const SignIn = ({userAuth,setLoginClicked,match,loginClicked})=>{
 		try {
 			if(buttonText === 'Login'){
 				try {
-					
 					await signInToAccount(email,password)
 				} catch (error) {
 					setLoginClicked('LOGIN_FEEDBACK')

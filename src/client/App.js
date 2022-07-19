@@ -48,6 +48,8 @@ function App({ active,userAuth,setUser,history,match,loginClicked,setMessage }) 
   const signOut = async()=>{
     try{
       await auth.signOut()
+      setMessage([[],[],[]])
+
     }
     catch(err){
       console.log(err)
