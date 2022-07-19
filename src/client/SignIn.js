@@ -56,8 +56,12 @@ const SignIn = ({userAuth,setLoginClicked,match,loginClicked})=>{
 		e.preventDefault()
 		try {
 			if(buttonText === 'Login'){
-				setLoginClicked('LOGIN_FEEDBACK')
-				await signInToAccount(email,password)
+				try {
+					
+					await signInToAccount(email,password)
+				} catch (error) {
+					setLoginClicked('LOGIN_FEEDBACK')
+				}
 			}
 			else if(buttonText === 'Send Email'){
 				try {
